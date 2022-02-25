@@ -3,14 +3,27 @@ height: 1500px;
 width: 100%;
 }
 
-#container{
+#timeContainer{
     position: absolute;
-    width: 300px;
+    width: 99%;
     height: 200px;
     z-index: 15;
-    top: 50%;
-    left: 50%;
-    margin: -100px 0 0 -150px;
+    top: 20%;
     text-align: center;
     border: 2px dashed black
+}
+
+#dateContainer{
+    position: absolute;
+    width: 99%;
+    height: 300px;
+    z-index: 15;
+    top: 50%;
+    text-align: center;
+    border: 2px dashed red;
+}
+
+#time, #demo{
+    font-size:140pt;
+    text-align: center;
 }

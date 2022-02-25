@@ -1,7 +1,7 @@
 /* const d = new Date();
 document.getElementById("currentTime").value = d; */
 
-var span = document.getElementById('span');
+var span = document.getElementById('time');
 
 function time() {
   var d = new Date();
@@ -16,16 +16,17 @@ function time() {
 
 }
 
-function getDate() {
-    var today = new Date();
-    var day = String(today.getDate()).padStart(2, '0');
-    var month = String(today.getMonth() + 1).padStart(2, '0');
-    var year = today.getFullYear();
-    today = month + '-' + day + '-' + year;
-    var dateBox = document.getElementById('date');
-    dateBox.textContent = today;
-}
+const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+
+
+
+
+const d = new Date();
+let currentMonth = month[d.getMonth()];
+var day = String(d.getDate()).padStart(2, '0');
+var year = d.getFullYear();
+document.getElementById("demo").innerHTML = currentMonth + ' ' + day + ', ' + year;
 
 
 setInterval(time, 1000);
-getDate();
